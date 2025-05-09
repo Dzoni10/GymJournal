@@ -15,7 +15,7 @@ namespace GymJournal.Startup
 
         private static void ConfigureAuthentication(IServiceCollection services)
         {
-            var key = Environment.GetEnvironmentVariable("JWT_KEY") ?? "gym_journal_secret_key";
+            var key = Environment.GetEnvironmentVariable("JWT_KEY") ?? "this_is_a_super_secret_key_with_32_chars_and_more_than_that";
             var issuer = Environment.GetEnvironmentVariable("JWT_ISSUER") ?? "gymjournal";
             var audience = Environment.GetEnvironmentVariable("JWT_AUDIENCE") ?? "gymjournal-front.com";
 

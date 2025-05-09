@@ -6,8 +6,10 @@ using Microsoft.Extensions.DependencyInjection;
 using GymJournal.Model;
 using GymJournal.Repositories;
 using GymJournal.RepositoryInterfaces;
-using Microsoft.AspNetCore.Authentication;
 using System.Runtime.CompilerServices;
+using GymJournal.ServiceInterfaces;
+using Microsoft.AspNetCore.WebSockets;
+using GymJournal.Services;
 
 namespace GymJournal.Infrastructure
 {
@@ -23,13 +25,17 @@ namespace GymJournal.Infrastructure
 
         private static void SetupModel(IServiceCollection services)
         {
+            services.AddScoped<IPersonEditingService, PersonEditingService>();
             services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<ITokenGenerator,JWTGenerator>();
         }
 
         private static void SetupInfrastructure(IServiceCollection services)
         {
             services.AddScoped(typeof(ICrudRepository<Person>), typeof(CrudDatabaseRepository<Person, GymJournalContext>));
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IPersonRepository, PersonRepository>();
 
             services.AddDbContext<GymJournalContext>(opt =>
             opt.UseNpgsql(DbConnectionStringBuilder.Build("gymjournal"),
