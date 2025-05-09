@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\infrastructure\\authentication\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\infrastructure\\authentication\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\startup\\authconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\startup\\authconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +55,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JWTGenerator.cs",
+              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Infrastructure\\Authentication\\JWTGenerator.cs",
+              "RelativeDocumentMoniker": "GymJournal\\Infrastructure\\Authentication\\JWTGenerator.cs",
+              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Infrastructure\\Authentication\\JWTGenerator.cs",
+              "RelativeToolTip": "GymJournal\\Infrastructure\\Authentication\\JWTGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T07:58:29.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthConfiguration.cs",
+              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Startup\\AuthConfiguration.cs",
+              "RelativeDocumentMoniker": "GymJournal\\Startup\\AuthConfiguration.cs",
+              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Startup\\AuthConfiguration.cs",
+              "RelativeToolTip": "GymJournal\\Startup\\AuthConfiguration.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBEAAACDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T07:49:41.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "GymJournal\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "GymJournal\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T06:59:23.401Z",
+              "EditorCaption": ""
             }
           ]
         },

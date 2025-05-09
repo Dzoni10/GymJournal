@@ -5,11 +5,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using FluentResults;
 using GymJournal.DTOs;
+using GymJournal.ServiceInterfaces;
 namespace GymJournal.Infrastructure.Authentication
 {
-    public class JWTGeneratot
+    public class JWTGenerator : ITokenGenerator
     {
-        private readonly string _key = Environment.GetEnvironmentVariable("JWT_KEY") ?? "gym_journal_secret_key";
+        private readonly string _key = Environment.GetEnvironmentVariable("JWT_KEY") ?? "this_is_a_super_secret_key_with_32_chars_and_more_than_that";
         private readonly string _issuer = Environment.GetEnvironmentVariable("JWT_ISSUER") ?? "gymjournal";
         private readonly string _audience = Environment.GetEnvironmentVariable("JWT_AUDIENCE") ?? "gymjournal-front.com";
 
