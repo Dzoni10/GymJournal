@@ -7,6 +7,7 @@ namespace GymJournal.Infrastructure.Database
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Person> People { get; set; }
+        public DbSet<Training> Training { get; set; }
         
         public GymJournalContext(DbContextOptions<GymJournalContext> options) : base(options) { }
 

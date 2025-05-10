@@ -10,7 +10,6 @@
             var schema = Environment.GetEnvironmentVariable("DATABASE_SCHEMA_NAME") ?? dbSchema;
             var user = Environment.GetEnvironmentVariable("DATABASE_USERNAME") ?? "postgres";
             var password = Environment.GetEnvironmentVariable("DATABASE_PASSWORD") ?? "super";
-            //var integratedSecurity = Environment.GetEnvironmentVariable("DATABASE_INTEGRATED_SECURITY") ?? "false";
             var pooling = Environment.GetEnvironmentVariable("DATABASE_POOLING") ?? "true";
 
             return

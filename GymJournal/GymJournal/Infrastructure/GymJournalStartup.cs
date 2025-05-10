@@ -29,13 +29,16 @@ namespace GymJournal.Infrastructure
             services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<ITokenGenerator,JWTGenerator>();
+            services.AddScoped<ITrainingService,TrainingService>();
         }
 
         private static void SetupInfrastructure(IServiceCollection services)
         {
-            services.AddScoped(typeof(ICrudRepository<Person>), typeof(CrudDatabaseRepository<Person, GymJournalContext>));
+            services.AddScoped(typeof(ICrudRepository<Person>), typeof(CrudDatabaseRepository<Person, GymJournalContext>)); // genericki za klasicne metode
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped(typeof(ICrudRepository<Training>),typeof(CrudDatabaseRepository<Training, GymJournalContext>)); // negenericki jer ima posebne metode
+            services.AddScoped<ITrainingRepository, TrainingRepository>();
 
             services.AddDbContext<GymJournalContext>(opt =>
             opt.UseNpgsql(DbConnectionStringBuilder.Build("gymjournal"),

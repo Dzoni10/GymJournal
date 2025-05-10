@@ -28,8 +28,11 @@ export class LoginComponent {
     {
       this.authService.login(login).subscribe({
         next: ()=>{
-          this.router.navigate(['/']);
+          this.router.navigate(['/training-profile']);
         },
+        error: ()=>{
+          alert("User with this credentials does not exist");
+        }
       });
     }
   }

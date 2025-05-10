@@ -1,0 +1,50 @@
+.profile-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .profile-header {
+    text-align: center;
+    background-color: #ede7f6; 
+  }
+  
+  .training-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  #slider {
+    width: 100%;
+    accent-color: #5e35b1;
+  }
+  
+  .slider-label {
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #5e35b1;
+  }
+  
+  .recent-trainings {
+    padding: 1rem;
+  }
+  
+  .secondary {
+    font-size: 0.85rem;
+    color: gray;
+  }
+  
+  .progress-button {
+    display: flex;
+    justify-content: center;
+  }
+  
