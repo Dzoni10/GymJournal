@@ -7,6 +7,7 @@ namespace GymJournal.Mappers
     {
         public GymJournalMapper() {
             CreateMap<PersonDTO, Person>().ReverseMap();
+            CreateMap<TrainingDTO,Training>().ReverseMap();
         }
     }
 }

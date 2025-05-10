@@ -12,11 +12,13 @@ import { UserModule } from './user/user.module';
 import { JwtInterceptor } from './core/jwt/jwt.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
 import {MatButtonModule} from '@angular/material/button'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { MatSliderModule } from '@angular/material/slider';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -36,13 +38,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    MatSliderModule,
+    FormsModule
   ],
   providers: [
+    DatePipe,
     {
       provide: JWT_OPTIONS,
-      useValue: JWT_OPTIONS
+      useValue: JWT_OPTIONS,
     },
     JwtHelperService,
     {
