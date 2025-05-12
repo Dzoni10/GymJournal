@@ -8,5 +8,6 @@ namespace GymJournal.ServiceInterfaces
         Result<AuthenticationTokenDTO> Register(AccountRegistrationDTO account);
         Result<AuthenticationTokenDTO> Login(CredentialsDTO ceredentials);
         Result<CredentialsDTO> GetUsername (long userId);
+        Result<string> GetUserNameById(long id);
     }
 }

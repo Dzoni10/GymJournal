@@ -25,6 +25,8 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    margin-left:auto;
+    margin-right: 30px;
 }
 
 .button{
@@ -46,8 +48,8 @@
 }
 
 .logout-button {
-    background-color: #F2D177;
-    color: #031926;
+    background-color:#784ac7;
+    color:  #f7f6f5;
     box-shadow: none;
     border: none;
     border-radius: 27px;
@@ -59,18 +61,18 @@
 }
 
 .logout-button:hover {
-    background-color: #DBFCFF;
-    color: #031926 ;
+    background-color: #491c96 ;
+    color: #becbd2 ;
     box-shadow: none ;
     border: 1px solid rgb(242, 209, 119, 0);
 }
 
 
 .login-button {
-    background-color: #031926 ;
-    color: #F2D177 ;
+    background-color:#784ac7;
+    color:  #f7f6f5;
     box-shadow: none ;
-    border: 2px solid #F2D177 ;
+    border: 2px solid #784ac7 ;
     border-radius: 27px ;
     font-family: 'Lulo Clean', serif;
     font-size: 10px ;
@@ -79,9 +81,8 @@
     margin-right: 10px;
 }
 
-
 .login-button:hover {
-    background-color: #F2D177 ;
-    color: #031926 ;
+    background-color: #491c96 ;
+    color: #becbd2 ;
     box-shadow: none ;
 }

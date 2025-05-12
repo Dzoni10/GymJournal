@@ -33,8 +33,6 @@ export class RegisterComponent {
 
   register(): void {
 
-    
-
     const registration: Registration = {
       name: this.registrationForm.value.name || "",
       surname: this.registrationForm.value.surname || "",

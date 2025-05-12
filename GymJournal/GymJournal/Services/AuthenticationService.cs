@@ -64,6 +64,12 @@ namespace GymJournal.Services
             CredentialsDTO dto = new CredentialsDTO { Password = user.Password, Username = user.Username };
             return dto;
         }
+
+        public Result<string> GetUserNameById(long userId)
+        {
+            var name = _userRepository.GetUserNameById(userId);
+            return Result.Ok(name);
+        }
     }
 
 }

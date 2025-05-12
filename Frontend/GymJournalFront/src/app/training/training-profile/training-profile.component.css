@@ -5,11 +5,13 @@
     flex-direction: column;
     gap: 1.5rem;
     padding: 1rem;
+    backdrop-filter: blur(6px);
   }
   
   .profile-header {
     text-align: center;
     background-color: #ede7f6; 
+    background-color: rgba(255, 255, 255, 0.75);
   }
   
   .training-form {
@@ -17,6 +19,7 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.55);
   }
   
   mat-form-field {
@@ -36,6 +39,7 @@
   
   .recent-trainings {
     padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.75);
   }
   
   .secondary {
@@ -46,5 +50,24 @@
   .progress-button {
     display: flex;
     justify-content: center;
+  }
+
+  :host {
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/assets/addt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
   

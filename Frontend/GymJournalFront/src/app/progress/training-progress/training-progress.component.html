@@ -1,0 +1,47 @@
+<div class="progress-container"  @slideIn>
+    <mat-card class="progress-card">
+      <mat-card-title class="title">Progress review per weeks</mat-card-title>
+  
+      <mat-form-field appearance="fill" class="month-picker">
+        <mat-label>Select month</mat-label>
+        <input matInput [matDatepicker]="picker" [formControl]="selectedDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="multi-year" (monthSelected)="chosenMonthHandler($event,picker)" panelClass="month-picker-panel" [startAt]="selectedDate.value">
+        </mat-datepicker>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="fetchDataForSelectedMonth()">View progress</button>
+      <button mat-raised-button color="primary" [routerLink]="['/training-profile']">Add new training</button>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+        <ng-container matColumnDef="weekNumber">
+          <th mat-header-cell *matHeaderCellDef>Week</th>
+          <td mat-cell *matCellDef="let row">{{ row.weekNumber }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="totalTrainings">
+          <th mat-header-cell *matHeaderCellDef>Trainings</th>
+          <td mat-cell *matCellDef="let row">{{ row.totalTrainings }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="totalDuration">
+          <th mat-header-cell *matHeaderCellDef>Total duration</th>
+          <td mat-cell *matCellDef="let row">{{ row.totalDuration }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="averageDifficulty">
+          <th mat-header-cell *matHeaderCellDef>Average difficulty</th>
+          <td mat-cell *matCellDef="let row">{{ row.averageDifficulty | number:'1.1-1' }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="averageFatigue">
+          <th mat-header-cell *matHeaderCellDef>Average fatigue</th>
+          <td mat-cell *matCellDef="let row">{{row.averageFatigue | number:'1.1-1' }}</td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card>
+  </div>

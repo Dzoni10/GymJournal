@@ -9,5 +9,6 @@ namespace GymJournal.RepositoryInterfaces
         User Create(User user);
         long GetPersonId(long userId);
         User GetUsername(long userId);
+        string GetUserNameById(long id);
     }
 }

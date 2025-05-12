@@ -88,4 +88,8 @@ export class AuthService {
     const token = this.tokenStorage.getAccessToken();
     return token != null; // Ako postoji token, smatraj korisnika ulogovanim
   }
+
+  getName(id: number): Observable<string> {
+    return this.http.get<string>(`${environment.apiHost}users/name/${id}`,{responseType: 'text' as 'json'});
+  }
 }

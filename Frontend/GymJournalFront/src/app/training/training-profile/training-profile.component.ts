@@ -6,7 +6,6 @@ import { TrainingProfileService } from '../training-profile.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ExerciseType } from '../model/exercise-type';
 import { AuthService } from 'src/app/auth/auth.service';
 import { DatePipe } from '@angular/common';
 
@@ -20,16 +19,19 @@ export class TrainingProfileComponent implements OnInit {
   trainingForm!: FormGroup;
   constructor(private trainingProfileService: TrainingProfileService, private builder: FormBuilder, private authService: AuthService, private dp: DatePipe){}
 
-
-   userName="pera";
+   
+   userName="";
    recentTrainings: TrainingModel[]=[];
    usrId: number=0;
+   today: Date = new Date();
 
    ngOnInit(): void {
-
+    this.today=new Date();
     this.authService.usr.subscribe(user => {
       this.usrId = user.id;
     });
+
+    this.getName(this.usrId);
 
     this.trainingForm = this.builder.group({
       exerciseType: [ '', Validators.required],
@@ -45,9 +47,6 @@ export class TrainingProfileComponent implements OnInit {
    }
 
    onSubmit(): void{
-
-    const selectedExerciseType = this.trainingForm.value.exerciseType;
-    const exerciseTypeNumber = ExerciseType[selectedExerciseType];
 
     const training: TrainingModel={
       userId : this.usrId,
@@ -73,7 +72,6 @@ export class TrainingProfileComponent implements OnInit {
         }
       });
     }
-
     this.getRecentTrainings();
    }
 
@@ -101,5 +99,15 @@ export class TrainingProfileComponent implements OnInit {
 
     convertDate(date: Date):string {
      return this.dp.transform(date, 'EEEE,dd-MM-yyyy')!;
+    }
+
+    getName(id: number){
+      this.authService.getName(id).subscribe({
+        next:(res)=>{
+            this.userName=res;
+        },error: (err)=>{
+          console.log("Error with name",err);
+        }
+      });
     }
 }

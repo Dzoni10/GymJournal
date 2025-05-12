@@ -44,6 +44,11 @@ namespace GymJournal.Repositories
             if (person == null) throw new KeyNotFoundException("Not found.");
             return person;
         }
+
+        public string GetUserNameById(long id)
+        {
+            return _dbContext.People.SingleOrDefault(p => p.UserId == id).Name;
+        }
     }
 
 }

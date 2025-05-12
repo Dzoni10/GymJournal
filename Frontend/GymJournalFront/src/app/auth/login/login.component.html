@@ -1,5 +1,5 @@
 <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <div>
+    <div class="form-container" @slideIn>
         <mat-form-field>
             <mat-label>Username</mat-label>
             <input matInput formControlName="username" type="text"/>

@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    RouterModule
     
   ]
 })

@@ -3,11 +3,20 @@ import { FormControl,FormGroup,Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import {Router} from '@angular/router';
 import { Login } from '../model/login.model';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  animations: [
+    trigger('slideIn', [
+      state('void', style({ transform: 'translateY(0)', opacity: 0 })),
+      transition(':enter', [
+        animate('2.5s ease-out', style({ transform: 'translateY(0)', opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class LoginComponent {
 
