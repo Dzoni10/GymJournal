@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using GymJournal.DTOs;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GymJournal.Controllers
 {
+    [Authorize]
     [Route("api/trainings")]
     public class TrainingController : BaseApiController
     {
