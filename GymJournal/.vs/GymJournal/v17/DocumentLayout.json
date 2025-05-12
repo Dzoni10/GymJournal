@@ -1,48 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\controllers\\trainingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\controllers\\trainingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\infrastructure\\authentication\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\infrastructure\\authentication\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\startup\\authconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\startup\\authconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\startup\\corsconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\startup\\corsconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\repositories\\trainingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\repositories\\trainingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|c:\\wedosoftwaregymjournal\\gymjournal\\gymjournal\\gymjournal\\repositoryinterfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A9CBF64-D74B-4467-AF5C-458DD30FA7A2}|GymJournal\\GymJournal.csproj|solutionrelative:gymjournal\\repositoryinterfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -50,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 137,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -83,135 +42,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Model\\Person.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Model\\Person.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Model\\Person.cs",
-              "RelativeToolTip": "GymJournal\\Model\\Person.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T07:48:40.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "GymJournal\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T07:45:32.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TrainingController.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Controllers\\TrainingController.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Controllers\\TrainingController.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Controllers\\TrainingController.cs",
-              "RelativeToolTip": "GymJournal\\Controllers\\TrainingController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T07:44:41.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "JWTGenerator.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Infrastructure\\Authentication\\JWTGenerator.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Infrastructure\\Authentication\\JWTGenerator.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Infrastructure\\Authentication\\JWTGenerator.cs",
-              "RelativeToolTip": "GymJournal\\Infrastructure\\Authentication\\JWTGenerator.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAgwDgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T07:42:44.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthConfiguration.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Startup\\AuthConfiguration.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Startup\\AuthConfiguration.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Startup\\AuthConfiguration.cs",
-              "RelativeToolTip": "GymJournal\\Startup\\AuthConfiguration.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAgwDwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T07:42:11.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Program.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Program.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Program.cs",
-              "RelativeToolTip": "GymJournal\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAkwCIAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T07:41:49.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CorsConfiguration.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Startup\\CorsConfiguration.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Startup\\CorsConfiguration.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Startup\\CorsConfiguration.cs",
-              "RelativeToolTip": "GymJournal\\Startup\\CorsConfiguration.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAgwCAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T07:39:39.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TrainingRepository.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Repositories\\TrainingRepository.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Repositories\\TrainingRepository.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Repositories\\TrainingRepository.cs",
-              "RelativeToolTip": "GymJournal\\Repositories\\TrainingRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T01:24:18.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PersonRepository.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Repositories\\PersonRepository.cs",
-              "RelativeDocumentMoniker": "GymJournal\\Repositories\\PersonRepository.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\Repositories\\PersonRepository.cs",
-              "RelativeToolTip": "GymJournal\\Repositories\\PersonRepository.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA8wA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T23:40:34.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\RepositoryInterfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "GymJournal\\RepositoryInterfaces\\IUserRepository.cs",
-              "ToolTip": "C:\\WeDoSoftwareGymJournal\\GymJournal\\GymJournal\\GymJournal\\RepositoryInterfaces\\IUserRepository.cs",
-              "RelativeToolTip": "GymJournal\\RepositoryInterfaces\\IUserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T23:40:11.851Z"
             }
           ]
         },

@@ -18,25 +18,9 @@ namespace GymJournal.Repositories
             _dbContext = dbContext;
         }
 
-        public ICollection<Training> GetAll()
-        {
-            return _dbContext.Training.ToList();
-        }
-
        public IQueryable<Training> GetAllUserTrainings(int userId)
         {
             return _dbContext.Training.Where(t => t.UserId == userId);
-        }
-
-        public Training GetByTrainingId(int trainingId)
-        {
-            return _dbContext.Training.SingleOrDefault(t => t.Id == trainingId);
-        }
-
-        public void Create(Training training)
-        {
-            _dbContext.Training.Add(training);
-            _dbContext.SaveChanges();
         }
 
         public async Task<List<TrainingProgress>> GetWeeklyProgress(long userId, int year, int month)
@@ -66,20 +50,6 @@ namespace GymJournal.Repositories
             return groupedByWeek;
         }
 
-        public IQueryable<Training> GetCardio()
-        {
-            return _dbContext.Training.Where(t=>t.ExerciseType == ExerciseType.CARDIO); 
-        }
-
-        public IQueryable<Training> GetStrength()
-        {
-            return _dbContext.Training.Where(t => t.ExerciseType == ExerciseType.STRENGTH);
-        }
-
-        public IQueryable<Training> GetFlexibility()
-        {
-            return _dbContext.Training.Where(t => t.ExerciseType == ExerciseType.FLEXIBILITY);
-        }
     }
 
 }

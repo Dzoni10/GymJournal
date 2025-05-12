@@ -54,11 +54,16 @@ export class RegisterComponent {
         this.authService.register(registration).subscribe({
           next: (result)=>{
             this.router.navigate(['/login']);
-            console.log(result);
           },
           error: (err)=>{
-            console.error("Registration error cannot register",err);
-            alert("Username already exist")
+            console.log(err);
+            const message = err.error?.detail as string;
+            if(message?.includes("username"))
+              alert("Username already exist");
+            else if(message?.includes("Email") || message?.includes(".com"))
+              alert("Wrong email format => must be 'smth@(gmail,yahoo..).com'");
+            else if(message?.includes("nonuniquemail"))
+              alert("Email already exist");
           }
         });
       }

@@ -40,13 +40,23 @@ export class TrainingProfileComponent implements OnInit {
       difficulty: [1],
       fatigue: [1],
       note: [''],
-      date: [new Date(), Validators.required]
+      date: [new Date(), Validators.required],
+      time: ['', Validators.required] 
     });
 
     this.getRecentTrainings();
    }
 
    onSubmit(): void{
+
+    const formValue = this.trainingForm.value;
+
+    const date = new Date(formValue.date);
+    const [hours, minutes] = formValue.time.split(':').map((v: string) => parseInt(v, 10));
+    date.setHours(hours);
+    date.setMinutes(minutes);
+    date.setSeconds(0);
+    date.setMilliseconds(0);
 
     const training: TrainingModel={
       userId : this.usrId,
@@ -56,7 +66,7 @@ export class TrainingProfileComponent implements OnInit {
       difficulty: this.trainingForm.value.difficulty || 0,
       fatigue: this.trainingForm.value.fatigue || 0,
       note: this.trainingForm.value.note || "",
-      date: this.trainingForm.value.date || ""
+      date: date.toISOString()
     };
 
     
@@ -97,8 +107,10 @@ export class TrainingProfileComponent implements OnInit {
         return "Flexibility";
     }
 
-    convertDate(date: Date):string {
-     return this.dp.transform(date, 'EEEE,dd-MM-yyyy')!;
+    convertDate(date: string|Date):string {
+      if (!date) return '';
+      const parsedDate = typeof date === 'string' ? new Date(date) : date;
+     return this.dp.transform(parsedDate, 'EEEE,dd-MM-yyyy HH:mm a')||'';
     }
 
     getName(id: number){

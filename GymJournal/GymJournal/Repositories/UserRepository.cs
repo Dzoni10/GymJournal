@@ -19,6 +19,12 @@ namespace GymJournal.Repositories
 
         }
 
+        public bool ExistsEmail(string mail)
+        {
+            return _dbContext.People.Any(p => p.Email == mail);
+
+        }
+
         public User? GetActiveByName(string username)
         {
             return _dbContext.Users.FirstOrDefault(user=>user.Username == username);

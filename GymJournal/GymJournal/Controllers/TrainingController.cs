@@ -59,31 +59,5 @@ namespace GymJournal.Controllers
             var result = _trainingService.GetUserTrainings(userId, page, pageSize);
             return CreateResponse(result);
         }
-
-        //[HttpGet]
-        //[Route("cardio")]
-        //public ActionResult<TrainingDTO> GetCardioTrainings([FromQuery] int page, [FromQuery] int pageSize)
-        //{
-        //    var result = _trainingService.GetCardio(page, pageSize);
-        //    return CreateResponse(result);
-        //}
-
-        //[HttpGet]
-        //[Route("strength")]
-        //public ActionResult<TrainingDTO> GetStrengthTrainings([FromQuery] int page, [FromQuery] int pageSize)
-        //{
-        //    var result = _trainingService.GetStrength(page, pageSize);
-        //    return CreateResponse(result);
-        //}
-
-        //[HttpGet]
-        //[Route("flexibility")]
-        //public ActionResult<TrainingDTO> GetFlexibilityTrainings([FromQuery] int page, [FromQuery] int pageSize)
-        //{
-        //    var result = _trainingService.GetFlexibility(page, pageSize);
-        //    return CreateResponse(result);
-        //}
-
-
     }
 }

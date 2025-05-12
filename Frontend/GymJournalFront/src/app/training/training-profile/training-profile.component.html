@@ -49,11 +49,10 @@
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
-        <!-- <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline">
             <mat-label>Time</mat-label>
-            <input matInput [ngxTimepicker]="time" formControlName="time" />
-            <ngx-mat-timepicker #time></ngx-mat-timepicker>
-          </mat-form-field> -->
+            <input matInput type="time" formControlName="time" />
+          </mat-form-field>
   
         <button mat-raised-button color="primary" type="submit" [disabled]="trainingForm.invalid">
           Save Training
