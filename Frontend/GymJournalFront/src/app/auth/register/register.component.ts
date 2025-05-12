@@ -58,6 +58,7 @@ export class RegisterComponent {
           },
           error: (err)=>{
             console.error("Registration error cannot register",err);
+            alert("Username already exist")
           }
         });
       }

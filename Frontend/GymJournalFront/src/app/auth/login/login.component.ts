@@ -40,7 +40,8 @@ export class LoginComponent {
           this.router.navigate(['/training-profile']);
         },
         error: ()=>{
-          alert("User with this credentials does not exist");
+          alert("User with this credentials does not exist please sign up");
+          this.router.navigate(['/register']);
         }
       });
     }
