@@ -17,7 +17,7 @@ export class TrainingProfileService {
     return this.http.post<TrainingModel>(environment.apiHost + 'trainings',training);
   }
 
-  getTours(): Observable<PagedResults<TrainingModel>>{
+  getTrainings(): Observable<PagedResults<TrainingModel>>{
     return this.http.get<PagedResults<TrainingModel>>(environment.apiHost + 'trainings/userTrainings');
   }
 

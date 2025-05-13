@@ -22,7 +22,7 @@
   
         <mat-form-field appearance="outline">
           <mat-label>Duration (minutes)</mat-label>
-          <input matInput type="number" max="60" formControlName="duration" />
+          <input matInput type="number" max="300" formControlName="duration" />
         </mat-form-field>
   
         <mat-form-field appearance="outline">
@@ -61,7 +61,7 @@
     </mat-card>
   
     <mat-card class="recent-trainings">
-      <h3>Your Recent Trainings</h3>
+      <h3>Your 5 Most Recent Trainings</h3>
       <mat-list>
         <mat-list-item *ngFor="let training of recentTrainings">
           <div mat-line>{{ reverseStatus(training) }} - {{ training.duration }} min - {{ training.calories }} kcal - on {{convertDate(training.date)}}</div>

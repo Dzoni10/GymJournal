@@ -20,7 +20,7 @@ namespace GymJournal.Repositories
 
        public IQueryable<Training> GetAllUserTrainings(int userId)
         {
-            return _dbContext.Training.Where(t => t.UserId == userId);
+            return _dbContext.Training.Where(t => t.UserId == userId).OrderByDescending(t=>t.Date).Take(5);
         }
 
         public async Task<List<TrainingProgress>> GetWeeklyProgress(long userId, int year, int month)

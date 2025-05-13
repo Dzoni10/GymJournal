@@ -76,21 +76,20 @@ export class TrainingProfileComponent implements OnInit {
         next:()=>{
           console.log(training);
           this.trainingForm.reset();
+          this.getRecentTrainings();
         },error:(err)=>{
           alert("Cannot save training");
           console.log(err);
         }
       });
     }
-    this.getRecentTrainings();
    }
-
 
    getRecentTrainings()
     {
-      this.trainingProfileService.getTours().subscribe({
+      this.trainingProfileService.getTrainings().subscribe({
         next: (res)=>{
-          this.recentTrainings=res.results;
+          this.recentTrainings=res.results.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).reverse();
         },error:(err)=>{
           alert("Cannot get trainings");
           console.log(err);

@@ -17,7 +17,7 @@ namespace GymJournal.Services
         {
             _tokenGenerator = tokenGenerator;
             _userRepository = userRepository;
-            _personRepository = personRepository;
+            _personRepository = personRepository;  
         }
 
 
