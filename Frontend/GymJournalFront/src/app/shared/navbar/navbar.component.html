@@ -1,6 +1,8 @@
 <div id="nav-bar"> 
+    <div class="navbar-title">GymJournal<sup>™</sup></div>
+
     <div class="navbar-buttons">
-        <button class="login-button" *ngIf="user && user.username===''" [routerLink]="['login']">Log in</button>
-        <button class="logout-button" *ngIf="user && user.username!==''" (click)="onLogout()">Log out</button>
+        <button mat-raised-button class="login-button" *ngIf="user && user.username===''" [routerLink]="['login']">Log in</button>
+        <button mat-raised-button class="logout-button" *ngIf="user && user.username!==''" (click)="onLogout()">Log out</button>
     </div>
 </div>

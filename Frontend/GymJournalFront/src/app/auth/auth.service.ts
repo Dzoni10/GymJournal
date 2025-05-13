@@ -9,7 +9,6 @@ import { AuthenticationResponse } from './model/authentication-response.model';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { environment } from 'src/env/enviroment';
 import { Login } from './model/login.model';
-import { NgZone } from '@angular/core';
 
 
 @Injectable({
@@ -81,11 +80,16 @@ export class AuthService {
     this.usr.next({ username: "", id: 0});
 
     this.router.navigate(['/login']);
-  
+
   }
 
   isAuthenticated(): boolean {
     const token = this.tokenStorage.getAccessToken();
     return token != null; // Ako postoji token, smatraj korisnika ulogovanim
   }
+
+  getName(id: number): Observable<string> {
+    return this.http.get<string>(`${environment.apiHost}users/name/${id}`,{responseType: 'text' as 'json'});
+  }
+
 }

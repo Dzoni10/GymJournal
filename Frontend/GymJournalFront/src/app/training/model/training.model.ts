@@ -8,5 +8,5 @@ export interface TrainingModel
     difficulty: number;
     fatigue: number;
     note: string;
-    date: Date
+    date: string|Date
 }

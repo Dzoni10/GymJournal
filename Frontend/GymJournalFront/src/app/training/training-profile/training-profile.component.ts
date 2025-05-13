@@ -6,7 +6,6 @@ import { TrainingProfileService } from '../training-profile.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ExerciseType } from '../model/exercise-type';
 import { AuthService } from 'src/app/auth/auth.service';
 import { DatePipe } from '@angular/common';
 
@@ -20,16 +19,19 @@ export class TrainingProfileComponent implements OnInit {
   trainingForm!: FormGroup;
   constructor(private trainingProfileService: TrainingProfileService, private builder: FormBuilder, private authService: AuthService, private dp: DatePipe){}
 
-
-   userName="pera";
+   
+   userName="";
    recentTrainings: TrainingModel[]=[];
    usrId: number=0;
+   today: Date = new Date();
 
    ngOnInit(): void {
-
+    this.today=new Date();
     this.authService.usr.subscribe(user => {
       this.usrId = user.id;
     });
+
+    this.getName(this.usrId);
 
     this.trainingForm = this.builder.group({
       exerciseType: [ '', Validators.required],
@@ -38,7 +40,8 @@ export class TrainingProfileComponent implements OnInit {
       difficulty: [1],
       fatigue: [1],
       note: [''],
-      date: [new Date(), Validators.required]
+      date: [new Date(), Validators.required],
+      time: ['', Validators.required] 
     });
 
     this.getRecentTrainings();
@@ -46,8 +49,14 @@ export class TrainingProfileComponent implements OnInit {
 
    onSubmit(): void{
 
-    const selectedExerciseType = this.trainingForm.value.exerciseType;
-    const exerciseTypeNumber = ExerciseType[selectedExerciseType];
+    const formValue = this.trainingForm.value;
+
+    const date = new Date(formValue.date);
+    const [hours, minutes] = formValue.time.split(':').map((v: string) => parseInt(v, 10));
+    date.setHours(hours);
+    date.setMinutes(minutes);
+    date.setSeconds(0);
+    date.setMilliseconds(0);
 
     const training: TrainingModel={
       userId : this.usrId,
@@ -57,7 +66,7 @@ export class TrainingProfileComponent implements OnInit {
       difficulty: this.trainingForm.value.difficulty || 0,
       fatigue: this.trainingForm.value.fatigue || 0,
       note: this.trainingForm.value.note || "",
-      date: this.trainingForm.value.date || ""
+      date: date.toISOString()
     };
 
     
@@ -67,22 +76,20 @@ export class TrainingProfileComponent implements OnInit {
         next:()=>{
           console.log(training);
           this.trainingForm.reset();
+          this.getRecentTrainings();
         },error:(err)=>{
           alert("Cannot save training");
           console.log(err);
         }
       });
     }
-
-    this.getRecentTrainings();
    }
-
 
    getRecentTrainings()
     {
-      this.trainingProfileService.getTours().subscribe({
+      this.trainingProfileService.getTrainings().subscribe({
         next: (res)=>{
-          this.recentTrainings=res.results;
+          this.recentTrainings=res.results.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).reverse();
         },error:(err)=>{
           alert("Cannot get trainings");
           console.log(err);
@@ -99,7 +106,19 @@ export class TrainingProfileComponent implements OnInit {
         return "Flexibility";
     }
 
-    convertDate(date: Date):string {
-     return this.dp.transform(date, 'EEEE,dd-MM-yyyy')!;
+    convertDate(date: string|Date):string {
+      if (!date) return '';
+      const parsedDate = typeof date === 'string' ? new Date(date) : date;
+     return this.dp.transform(parsedDate, 'EEEE,dd-MM-yyyy HH:mm a')||'';
+    }
+
+    getName(id: number){
+      this.authService.getName(id).subscribe({
+        next:(res)=>{
+            this.userName=res;
+        },error: (err)=>{
+          console.log("Error with name",err);
+        }
+      });
     }
 }

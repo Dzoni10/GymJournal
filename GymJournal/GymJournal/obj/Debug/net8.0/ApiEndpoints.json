@@ -27,37 +27,6 @@
   },
   {
     "ContainingType": "GymJournal.Controllers.TrainingController",
-    "Method": "GetPaged",
-    "RelativePath": "api/trainings",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GymJournal.DTOs.TrainingDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GymJournal.Controllers.TrainingController",
     "Method": "GetById",
     "RelativePath": "api/trainings/{id}",
     "HttpMethod": "GET",
@@ -84,26 +53,26 @@
   },
   {
     "ContainingType": "GymJournal.Controllers.TrainingController",
-    "Method": "GetCardioTrainings",
-    "RelativePath": "api/trainings/cardio",
+    "Method": "GetWeeklyProgress",
+    "RelativePath": "api/trainings/progress",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "page",
+        "Name": "year",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "pageSize",
+        "Name": "month",
         "Type": "System.Int32",
         "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "GymJournal.DTOs.TrainingDTO",
+        "Type": "GymJournal.DTOs.TrainingProgressDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -115,39 +84,8 @@
   },
   {
     "ContainingType": "GymJournal.Controllers.TrainingController",
-    "Method": "GetFlexibilityTrainings",
-    "RelativePath": "api/trainings/flexibility",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GymJournal.DTOs.TrainingDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GymJournal.Controllers.TrainingController",
-    "Method": "GetStrengthTrainings",
-    "RelativePath": "api/trainings/strength",
+    "Method": "GetUserTrainings",
+    "RelativePath": "api/trainings/userTrainings",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -218,6 +156,32 @@
     "ReturnTypes": [
       {
         "Type": "GymJournal.DTOs.AuthenticationTokenDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymJournal.Controllers.AuthenticationController",
+    "Method": "GetName",
+    "RelativePath": "api/users/name/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -2,6 +2,10 @@
     <mat-card class="profile-header">
       <h2>Welcome, {{ userName }}!</h2>
     </mat-card>
+
+    <div class="progress-button">
+      <button mat-raised-button type="button" color="primary" [routerLink]="['/progress']" >View Progress</button>
+    </div>
   
     <mat-card class="training-form">
       <h3>Add New Training</h3>
@@ -18,7 +22,7 @@
   
         <mat-form-field appearance="outline">
           <mat-label>Duration (minutes)</mat-label>
-          <input matInput type="number" max="60" formControlName="duration" />
+          <input matInput type="number" max="300" formControlName="duration" />
         </mat-form-field>
   
         <mat-form-field appearance="outline">
@@ -40,16 +44,15 @@
   
         <mat-form-field appearance="outline">
           <mat-label>Date & Time</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="date" />
+          <input matInput [matDatepicker]="picker" formControlName="date" [max]="today" />
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
-        <!-- <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline">
             <mat-label>Time</mat-label>
-            <input matInput [ngxTimepicker]="time" formControlName="time" />
-            <ngx-mat-timepicker #time></ngx-mat-timepicker>
-          </mat-form-field> -->
+            <input matInput type="time" formControlName="time" />
+          </mat-form-field>
   
         <button mat-raised-button color="primary" type="submit" [disabled]="trainingForm.invalid">
           Save Training
@@ -58,7 +61,7 @@
     </mat-card>
   
     <mat-card class="recent-trainings">
-      <h3>Your Recent Trainings</h3>
+      <h3>Your 5 Most Recent Trainings</h3>
       <mat-list>
         <mat-list-item *ngFor="let training of recentTrainings">
           <div mat-line>{{ reverseStatus(training) }} - {{ training.duration }} min - {{ training.calories }} kcal - on {{convertDate(training.date)}}</div>
@@ -66,9 +69,6 @@
         </mat-list-item>
       </mat-list>
     </mat-card>
-  
-    <div class="progress-button">
-      <button mat-stroked-button color="accent" routerLink="/progress">View Progress</button>
-    </div>
+
   </div>
   

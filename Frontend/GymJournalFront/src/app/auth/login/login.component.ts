@@ -3,15 +3,25 @@ import { FormControl,FormGroup,Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import {Router} from '@angular/router';
 import { Login } from '../model/login.model';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  animations: [
+    trigger('slideIn', [
+      state('void', style({ transform: 'translateY(0)', opacity: 0 })),
+      transition(':enter', [
+        animate('2.5s ease-out', style({ transform: 'translateY(0)', opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class LoginComponent {
 
-  constructor(private authService: AuthService, private router: Router){}
+  constructor(private authService: AuthService, private router: Router,private snackBar: MatSnackBar){}
 
   loginForm = new FormGroup({
     username: new FormControl('', [Validators.required]),
@@ -30,8 +40,8 @@ export class LoginComponent {
         next: ()=>{
           this.router.navigate(['/training-profile']);
         },
-        error: ()=>{
-          alert("User with this credentials does not exist");
+        error: (err)=>{
+          this.snackBar.open("User with this credentials does not exist please sign up" , "Close", { duration: 3000 ,verticalPosition:'bottom', horizontalPosition:'center'})
         }
       });
     }

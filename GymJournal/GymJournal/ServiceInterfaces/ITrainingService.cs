@@ -8,13 +8,7 @@ namespace GymJournal.ServiceInterfaces
     {
         Result<TrainingDTO> Get(int id);
         Result<TrainingDTO> Create(TrainingDTO trainingDTO);
-        Result<TrainingDTO> Update(TrainingDTO trainingDTO);
-        Result<PagedResult<TrainingDTO>> GetPaged(int page,int pageSize);
-        Result<PagedResult<TrainingDTO>> GetCardio(int page,int pageSize);
-
-        Result<PagedResult<TrainingDTO>> GetStrength(int page, int pageSize);
-
-        Result<PagedResult<TrainingDTO>> GetFlexibility(int page, int pageSize);
-        //Result<PagedResult<TrainingDTO>> GetTrainingsByUserId(int userId);
+        Result<PagedResult<TrainingDTO>> GetUserTrainings(int userId,int page,int pageSize);
+        Task<List<TrainingProgressDTO>> GetWeeklyProgressAsync(long userId, int year, int month);
     }
 }

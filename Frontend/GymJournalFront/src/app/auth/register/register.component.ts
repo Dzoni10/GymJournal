@@ -4,7 +4,7 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Registration } from '../model/registration.model';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +16,7 @@ export class RegisterComponent {
 
   loggedInUser: User|undefined;
 
-  constructor(private authService: AuthService, private router: Router)
+  constructor(private authService: AuthService, private router: Router, private snackBar:MatSnackBar)
   {}
 
 
@@ -32,8 +32,6 @@ export class RegisterComponent {
   });
 
   register(): void {
-
-    
 
     const registration: Registration = {
       name: this.registrationForm.value.name || "",
@@ -54,12 +52,18 @@ export class RegisterComponent {
       if(this.registrationForm.valid)
       {
         this.authService.register(registration).subscribe({
-          next: (result)=>{
+          next: ()=>{
             this.router.navigate(['/login']);
-            console.log(result);
           },
           error: (err)=>{
-            console.error("Registration error cannot register",err);
+            console.log(err);
+            const message = err.error?.detail as string;
+            if(message?.includes("username"))
+              this.snackBar.open("Username already exist" , "Close", { duration: 3000 ,verticalPosition:'bottom', horizontalPosition:'center'})
+            else if(message?.includes("Email") || message?.includes(".com"))
+              this.snackBar.open("Wrong email format => must be 'smth@(gmail,yahoo..).com'" , "Close", { duration: 3000 ,verticalPosition:'bottom', horizontalPosition:'center'})
+            else if(message?.includes("nonuniquemail"))
+              this.snackBar.open("Email already exist" , "Close", { duration: 3000 ,verticalPosition:'bottom', horizontalPosition:'center'})
           }
         });
       }

@@ -1,6 +1,4 @@
-﻿
-
-using FluentResults;
+﻿using FluentResults;
 using GymJournal.DTOs;
 using GymJournal.Model;
 using GymJournal.RepositoryInterfaces;
@@ -19,7 +17,7 @@ namespace GymJournal.Services
         {
             _tokenGenerator = tokenGenerator;
             _userRepository = userRepository;
-            _personRepository = personRepository;
+            _personRepository = personRepository;  
         }
 
 
@@ -43,10 +41,15 @@ namespace GymJournal.Services
 
         public Result<AuthenticationTokenDTO> Register(AccountRegistrationDTO account)
         {
-            if (_userRepository.Exists(account.Username)) return Result.Fail(FailureCode.NonUniqueUsername);
+            if (_userRepository.Exists(account.Username)) 
+                return Result.Fail(FailureCode.NonUniqueUsername);
+            if (_userRepository.ExistsEmail(account.Email)) 
+                return Result.Fail(FailureCode.NonUniqueEmail);
 
             try
             {
+                var exception = new Person(account.Name, account.Surname, account.Email, account.Phone);
+
                 var user = _userRepository.Create(new User(account.Username, account.Password));
                 var person = _personRepository.Create(new Person(user.Id, account.Name, account.Surname, account.Email, account.Phone));
 
@@ -63,6 +66,12 @@ namespace GymJournal.Services
             var user = _userRepository.GetUsername(userId);
             CredentialsDTO dto = new CredentialsDTO { Password = user.Password, Username = user.Username };
             return dto;
+        }
+
+        public Result<string> GetUserNameById(long userId)
+        {
+            var name = _userRepository.GetUserNameById(userId);
+            return Result.Ok(name);
         }
     }
 

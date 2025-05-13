@@ -12,14 +12,13 @@ export class TrainingProfileService {
 
   constructor(private http: HttpClient) { }
 
-
   addTraining(training: TrainingModel): Observable<TrainingModel>{
     console.log(training);
     return this.http.post<TrainingModel>(environment.apiHost + 'trainings',training);
   }
 
-  getTours(): Observable<PagedResults<TrainingModel>>{
-    return this.http.get<PagedResults<TrainingModel>>(environment.apiHost + 'trainings');
+  getTrainings(): Observable<PagedResults<TrainingModel>>{
+    return this.http.get<PagedResults<TrainingModel>>(environment.apiHost + 'trainings/userTrainings');
   }
 
 }

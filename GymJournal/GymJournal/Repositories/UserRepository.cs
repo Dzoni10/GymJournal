@@ -19,6 +19,12 @@ namespace GymJournal.Repositories
 
         }
 
+        public bool ExistsEmail(string mail)
+        {
+            return _dbContext.People.Any(p => p.Email == mail);
+
+        }
+
         public User? GetActiveByName(string username)
         {
             return _dbContext.Users.FirstOrDefault(user=>user.Username == username);
@@ -43,6 +49,11 @@ namespace GymJournal.Repositories
             var person = _dbContext.Users.FirstOrDefault(i => i.Id == userId);
             if (person == null) throw new KeyNotFoundException("Not found.");
             return person;
+        }
+
+        public string GetUserNameById(long id)
+        {
+            return _dbContext.People.SingleOrDefault(p => p.UserId == id).Name;
         }
     }
 

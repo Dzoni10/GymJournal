@@ -1,16 +1,12 @@
-﻿using GymJournal.Model;
+﻿using GymJournal.DTOs;
+using GymJournal.Model;
 
 namespace GymJournal.RepositoryInterfaces
 {
     public interface ITrainingRepository
     {
-        ICollection<Training> GetAll();
-        ICollection<Training> GetAllUserTrainings(int userId);
-        Training GetByTrainingId(int trainingId);
-        void Create(Training training);
-        IQueryable<Training> GetCardio();
-        IQueryable<Training> GetStrength();
-        IQueryable<Training> GetFlexibility();
+        IQueryable<Training> GetAllUserTrainings(int userId);
+        Task<List<TrainingProgress>> GetWeeklyProgress(long userId, int year, int month);
 
     }
 }

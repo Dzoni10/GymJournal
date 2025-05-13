@@ -7,6 +7,8 @@ namespace GymJournal.Startup
         public static readonly IError NonUniqueUsername = new Error("User with supplied username already exists.")
         .WithMetadata("code", 400)
         .WithMetadata("subCode", 1);
+        public static readonly IError NonUniqueEmail = new Error("User with supplied email already exists. nonuniquemail")
+        .WithMetadata("code", 400);
 
         public static readonly IError InvalidArgument = new Error("Invalid data supplied.")
             .WithMetadata("code", 400);

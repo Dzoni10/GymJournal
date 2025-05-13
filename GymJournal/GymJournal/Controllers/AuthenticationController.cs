@@ -34,5 +34,12 @@ namespace GymJournal.Controllers
             var result = _authenticationService.GetUsername(userId);
             return CreateResponse(result);
         }
+
+        [HttpGet("name/{userId:int}")]
+        public ActionResult<string> GetName([FromRoute] int userId)
+        {
+            var result = _authenticationService.GetUserNameById(userId);
+            return CreateResponse(result);
+        }
     }
 }
