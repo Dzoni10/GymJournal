@@ -39,7 +39,7 @@ namespace GymJournal.Model
             if (string.IsNullOrWhiteSpace(Surname)) throw new ArgumentException("Invalid Surname");
             if (!MailAddress.TryCreate(Email, out _)) throw new ArgumentException("Invalid Email");
 
-            var emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            var emailPattern = @"^[^@\s]+@[^@\s]+\.[a-zA-Z]{3}$";
             if (!System.Text.RegularExpressions.Regex.IsMatch(Email, emailPattern))
                 throw new ArgumentException("Invalid Email: must include domain like .com");
         }

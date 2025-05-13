@@ -35,7 +35,7 @@ export class TrainingProfileComponent implements OnInit {
 
     this.trainingForm = this.builder.group({
       exerciseType: [ '', Validators.required],
-      duration: [null, [Validators.required, Validators.min(1), Validators.max(60)]],
+      duration: [null, [Validators.required, Validators.min(1), Validators.max(300)]],
       calories: [null, [Validators.required, Validators.min(1)]],
       difficulty: [1],
       fatigue: [1],
@@ -109,7 +109,7 @@ export class TrainingProfileComponent implements OnInit {
     convertDate(date: string|Date):string {
       if (!date) return '';
       const parsedDate = typeof date === 'string' ? new Date(date) : date;
-     return this.dp.transform(parsedDate, 'EEEE,dd-MM-yyyy HH:mm a')||'';
+     return this.dp.transform(parsedDate, 'EEEE,dd-MM-yyyy HH:mm ')||'';
     }
 
     getName(id: number){

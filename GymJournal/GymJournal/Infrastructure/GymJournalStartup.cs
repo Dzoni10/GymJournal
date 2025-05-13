@@ -25,7 +25,6 @@ namespace GymJournal.Infrastructure
 
         private static void SetupModel(IServiceCollection services)
         {
-            services.AddScoped<IPersonEditingService, PersonEditingService>();
             services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<ITokenGenerator,JWTGenerator>();

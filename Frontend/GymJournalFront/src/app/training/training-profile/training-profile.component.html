@@ -64,7 +64,7 @@
       <h3>Your 5 Most Recent Trainings</h3>
       <mat-list>
         <mat-list-item *ngFor="let training of recentTrainings">
-          <div mat-line>{{ reverseStatus(training) }} - {{ training.duration }} min - {{ training.calories }} kcal - on {{convertDate(training.date)}}</div>
+          <div mat-line>{{ reverseStatus(training) }} - {{ training.duration }} min - {{ training.calories }} kcal - on {{convertDate(training.date)}} h</div>
           <div mat-line class="secondary">Fatigue: {{ training.fatigue }} | Intensity: {{ training.difficulty }}</div>
         </mat-list-item>
       </mat-list>
